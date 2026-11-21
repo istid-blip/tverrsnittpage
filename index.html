@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Cross-section</title>
+  <style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #121212; }
+  </style>
+  <script>
+    const language = navigator.language.split(/[-_]/)[0].toLowerCase();
+    document.documentElement.lang = language === 'no' || language === 'nb' ? 'nb' : language === 'sv' ? 'sv' : 'en';
+    document.title = { nb: 'Tverrsnitt', sv: 'Tvärsnitt', en: 'Cross-section' }[document.documentElement.lang];
+    if (language === 'no') {
+      Object.defineProperty(navigator, 'languages', { value: ['nb', ...navigator.languages] });
+    }
+  </script>
+</head>
+<body>
+  <noscript>This calculator requires JavaScript.</noscript>
+  <script src="tverrsnitt.js"></script>
+</body>
+</html>
